@@ -1,0 +1,72 @@
+:root{
+  --spacing: 25px;
+  --pad: 6px;
+  --paletteBoxWidth: 300px;
+  --paletteBoxHeight: 150px;
+  --paletteDescFontSize: 14px;
+  --colourCodeFontSize: 15px;
+}
+html,body{
+  font-size: 100%;
+}
+body{
+  margin: var(--spacing);
+  font-family: sans-serif;
+}
+header{
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: var(--spacing);
+  font-family: monospace;
+  color: #333;
+  font-size: var(--paletteDescFontSize);
+}
+.click-to-copy{
+  background-color: black;
+  color: white
+}
+.container{
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.palette__item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(var(--spacing) * 1.5);
+}
+.palette__colour{
+  width: var(--paletteBoxWidth);
+  height: var(--paletteBoxHeight);
+}
+.palette__desc{
+  margin-top: var(--paletteBoxHeight);
+  padding: var(--pad);
+  background-color: transparent;
+  color: #333;
+  border: 1px dashed #ccc;
+  border-top: 0;
+  font-weight: bold;
+  font-size: var(--paletteDescFontSize);
+}
+.palette__message{
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  padding: 4px;
+  background-color: white;
+  color: green;
+}
+
+@media (min-width: 769px) {
+  header{
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
