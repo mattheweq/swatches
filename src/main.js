@@ -38,7 +38,7 @@ function createItem(colour) {
 
 const paletteContainer = document.querySelector('.container');
 
-fetch('data/colour.json')
+fetch('data/color.json')
   .then(res => res.json())
   .then(colourList => {
     for (const { desc, colour } of colourList) {
